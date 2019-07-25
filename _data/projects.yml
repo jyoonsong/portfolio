@@ -1,0 +1,12 @@
+- id: soundglance
+  title: SoundGlance
+  pdf: /assets/SoundGlance.pdf
+  code: https://github.com/SoundGlance/
+  teaser: /images/SoundGlance.png
+  desc: Briefing the glanceable cues of Web pages for screen reader users
+
+- id: oss
+  title: OSS Efficiency
+  code: https://github.com/jyoonsong/oss-efficiency
+  teaser: /images/Atari2600.png
+  desc: What Is Needed for the Sustainable Success of Open Source Software Projects? - Efficiency Analysis of Commit Production Process via Git

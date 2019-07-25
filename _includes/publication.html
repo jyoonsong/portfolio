@@ -1,0 +1,55 @@
+<div class="publication" data-pub='{{ pub | jsonify | escape }}'>
+    <h3>
+        {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{% endif %}
+        {{ pub.title }}
+        {% if pub.url %}</a>{% endif %}
+        <small class="badge">{{ pub.type }}</small>
+    </h3>
+    <div class="authors">
+        {% for author in pub.authors %}
+            {% if forloop.last %} and {% endif %}
+                {% if author == "Jaeyoon Song" %}<strong>{{ author }}</strong>
+                {% else %}{{ author }}
+                {% endif %}
+            {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+    </div>
+
+    {% if pub.proc %}
+    <div class="proc calm">
+        {% if pub.proc.url %}<a href="{{ pub.proc.url }}" target="_blank">{% endif %}
+        {{ pub.proc.title }}
+        {%- if pub.proc.abbr -%}&nbsp;({{ pub.proc.abbr }}){% endif -%}
+        {% if pub.proc.url -%}</a>{%- endif -%},
+        pp. {{ pub.proc.page }}, {{ pub.proc.venue }}, {{ pub.year }}.
+    </div>
+    {% endif %}
+
+    {% if pub.journal %}
+    <div class="journal calm">
+        {% if pub.journal.url -%}<a href="{{ pub.journal.url }}" target="_blank">{% endif %}
+        {{ pub.journal.title }}
+        {%- if pub.journal.abbr -%}&nbsp;({{ pub.journal.abbr }}){% endif -%}
+        {% if pub.journal.url -%}</a>{% endif -%},
+        {% if pub.journal.ea -%}to appear{% else -%}vol. {{ pub.journal.volume}}, no. {{ pub.journal.issue }}, pp. {{ pub.journal.page }}{% endif %}, {{ pub.year }}.
+    </div>
+    {% endif %}
+
+    {% if pub.poster %}
+    <div class="poster calm">
+        poster in {% if pub.poster.url -%}<a href="{{ pub.poster.url }}">{% endif %}{{ pub.poster.title }}
+        {%- if pub.poster.abbr -%}&nbsp;({{ pub.poster.abbr }}){% endif -%}
+        {%- if pub.poster.url -%}</a>{% endif %}, {{ pub.poster.venue }}, {{ pub.year }}.
+    </div>
+    {% endif %}
+
+    {% if pub.type == 'Patent' %}
+    <div class="calm">
+        {{ pub.year }}.
+    </div>
+    {% endif %}
+
+    {% assign proj2 = site.data.projects | where: "id", pub.id %}
+    {% assign proj = proj2[0] %}
+    {% include extra_links.html proj=proj %}
+</div>

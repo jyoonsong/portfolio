@@ -1,0 +1,36 @@
+- id: soundglance
+  title: "SoundGlance: Briefing the Glanceable Cues of Web Pages for Screen Reader Users"
+  authors:
+    - Jaeyoon Song
+    - Kiroong Choe
+    - Jaemin Jo
+    - Jinwook Seo
+  poster:
+    title: ACM Conference on Human Factors in Computing Systems
+    abbr: CHI 2019
+    url: https://chi2019.acm.org/
+    venue: Glasgow, United Kingdom
+  year: 2019
+  attrs:
+    - international
+    - conference
+    - poster
+  type: Poster
+    
+- id: oss
+  title: "What Is Needed for the Sustainable Success of Open Source Software Projects: Efficiency Analysis of Commit Production Process via Git"
+  year: 2018
+  authors:
+    - Jaeyoon Song
+    - Changhee Kim
+  journal:
+    title: Sustainability
+    volume: 10
+    issue: 9
+    page: 3001
+  url: https://www.mdpi.com/2071-1050/10/9/3001
+  attrs:
+    - international
+    - journal
+    - paper
+  type: Paper

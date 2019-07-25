@@ -1,0 +1,39 @@
+section {
+    margin-bottom: 2.5rem;
+}
+
+#intro {
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: $on-large) {
+        padding: 40px 0;
+        flex-direction: row;
+    }
+    .cube {
+        @extend %center;
+    }
+}
+
+@media (max-width: $on-large) {
+    .cube svg {
+        width: 160px;
+        padding-bottom: 2rem;
+    }
+}
+
+.indent {
+    padding-left: 1rem;
+    i {
+        margin-left: -1rem;
+    }
+}
+
+.date {
+    margin-left: .5rem;
+    color: $grey-color;
+    font-size: .85em;
+}
+
+.black {
+    color: #000 !important;
+}

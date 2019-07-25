@@ -1,0 +1,28 @@
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col one-half">
+        <h3 class="footer-heading">Contact</h3>
+          <ul class="contact-list">
+              {%- if site.email -%}
+              <li><a class="u-email" href="mailto:{{ site.email }}"><i class="far fa-envelope"></i> {{ site.email }}</a></li>
+              {%- endif -%}
+              
+              <li><a class="u-email" target="_blank" href="https://github.com/jyoonsong/"><i class="fab fa-github"></i> GitHub</a></li>
+              <li><a class="u-email" target="_blank" href="https://dribbble.com/jaeyoon/"><i class="fab fa-dribbble"></i> Dribbble</a></li>
+              <!-- <li><a class="u-email" href="https://fb.com/i.am.jyoon/"><i class="fab fa-facebook"></i> Facebook</a></li> -->
+              <li><a class="u-email" target="_blank" href="https://instagram.com/jaeyo_on_/"><i class="fab fa-instagram"></i> Instagram</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col one-half">
+          <p><br>{{- site.description | escape -}}</p>
+        </div>
+      </div>
+
+    </div>
+  
+  </footer>
