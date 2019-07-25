@@ -73,5 +73,22 @@ title: About
 
 <h2 class="title">Random Fact</h2>
 <section id="experience">
-Jaeyoon likes <span id="random">Cho-dang tofu</span> !
+    Jaeyoon likes <a href="" target="_blank" id="random">Cho-dang tofu</a> !
 </section>
+
+<script>
+    const items = ["Chodang tofu", "dogs", "drawing", "Jack Johnson", "Kim Kwang-seok", "egg mayo sandwich", "Material Design"]
+    let item = items[Math.floor(Math.random() * items.length)];
+    let random = document.getElementById("random");
+
+    random.innerText = item;
+    random.setAttribute("href", "https://www.google.com/search?q=" + query(item))
+
+    function query(item) {
+        let str = "";
+        item.split(" ").forEach(function(ele) {
+            str += ele + "+";
+        })
+        return str.substr(0, str.length - 1);
+    }
+</script>

@@ -40,6 +40,10 @@
   text-align: right;
   z-index: 1000;
 
+  .current {
+    color: $brand-color;
+  }
+
   .nav-trigger {
       display: none;
   }
@@ -300,11 +304,16 @@
   width:         calc(50% - (#{$spacing-unit} / 2));
 }
 
-
+// index section title
 .title {
   border-left: $brand-color 5px solid;
   padding-left: .75rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   line-height: 1;
+}
+
+// footer
+.footer-heading {
+  margin-top: 0rem;
 }

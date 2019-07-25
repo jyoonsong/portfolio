@@ -1,5 +1,6 @@
 - id: soundglance
   title: "SoundGlance: Briefing the Glanceable Cues of Web Pages for Screen Reader Users"
+  year: 2019
   authors:
     - Jaeyoon Song
     - Kiroong Choe
@@ -8,9 +9,8 @@
   poster:
     title: ACM Conference on Human Factors in Computing Systems
     abbr: CHI 2019
-    url: https://chi2019.acm.org/
     venue: Glasgow, United Kingdom
-  year: 2019
+  url: https://dl.acm.org/citation.cfm?id=3312865/
   attrs:
     - international
     - conference
@@ -24,7 +24,7 @@
     - Jaeyoon Song
     - Changhee Kim
   journal:
-    title: Sustainability
+    title: Sustainability (SSCI/SCIE)
     volume: 10
     issue: 9
     page: 3001
@@ -34,3 +34,27 @@
     - journal
     - paper
   type: Paper
+
+- id: solutionChat
+  title: "SolutionChat: Supporting Ill-structured Chat Discussion"
+  authors:
+    - Project at Kixlab (Dec 2018 - Present)
+  year: 2018
+  wip:
+    - des: Scaffolding ill-structured problem solving process in online chat
+  attrs:
+    - international
+    - wip
+  type: Work in Progress
+
+- id: gaemi
+  title: "Credibility Assessment and Critical Thinking through Microtasks while Reading"
+  authors:
+    - Project at Kixlab (July 2019 - Present)
+  year: 2019
+  wip:
+    - des: How to intrinsically motivate readers by personalizing the sequence of microtasks
+  attrs:
+    - international
+    - wip
+  type: Work in Progress

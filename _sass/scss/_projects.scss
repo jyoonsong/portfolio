@@ -1,0 +1,72 @@
+
+.project {
+    position: relative;
+    perspective: 40vw;
+    transform-style: preserve-3d;
+
+    .box-unvisible {
+        position: absolute;
+
+        &.top {
+            top: 0;
+            right: 0;
+            bottom: 50%;
+            left: 0;
+            clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+            &~ .box-visible {
+                transform: rotateX(20deg);
+            }
+        }
+        
+        &.right{
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
+            &~ .box-visible {
+                transform: rotateY(20deg);
+            }
+        }
+        
+        &.bottom {
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
+            &~ .box-visible {
+                transform: rotateX(-20deg);
+            }
+        }
+        
+        &.left {
+            top: 0;
+            right: 50%;
+            bottom: 0;
+            left: 0;
+            clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0);
+            &~ .box-visible {
+                transform: rotateY(-20deg);
+            }
+        }
+        
+        
+    }
+
+    .box-visible {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        pointer-events: none;
+        will-change: transform;
+        transition: transform 0.5s;
+    }
+    
+}
+

@@ -1,9 +1,68 @@
-<div class="project">
-    <h3>{{ proj.title }}</h3>
-    <div class="teaser" style="background-image: url({{ proj.teaser}})">
+<style>
+    .filtered-list input {
+        display: none;
+    }
+    .filtered-list .filter-item {
+        transition: all .35s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    /* Generate CSS filter rules */
+    {% for topic in site.data.projects.topics %}
+    #category-{{topic}}:checked ~ .projects > li:not(.category-{{topic}}),
+    {% endfor %}
+    {
+        max-height: 0px;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .segmented-control {
+        display: flex;
+        max-width: 100vw;
+        overflow: auto;
+    }
+    .segmented-control > * {
+        display: inline-block;
+        border: 1px solid #eee;
+        background-color: #fff;
+        padding: 0 1em;
+        line-height: 2em;
+        font-weight: normal;
+        cursor: pointer;
+        font-size: .95em;
+        margin-left: -1px;
+    }
+    .segmented-control > :first-child {
+        border-radius: 5px 0 0 5px;
+    }
+    .segmented-control > :last-child {
+        border-radius: 0 5px 5px 0;
+    }
+    #category-all:checked ~ .filter-labels #label-category-all,
+    {% for topic in site.data.projects.topics %}
+    #category-{{topic}}:checked ~ .filter-labels #label-category-{{topic}},
+    {% endfor %}
+    {
+        background-color: #544b61;
+        color: #fff;
+    }
+</style>
+
+{% assign projects = site.data.projects.projects | where_exp: "proj", "proj.hidden == nil" %}
+{% for proj in projects %}
+<div class="row">
+    <div class="project col-12 col-sm-6 col-md-4">
+        <span class='box-unvisible top'></span>
+        <span class='box-unvisible right'></span>
+        <span class='box-unvisible bottom'></span>
+        <span class='box-unvisible left'></span>
+        <div class='box-visible' {% if proj.teaser %} style="background-image: url({{ proj.teaser }})" {% endif %}>
+            <b>{{ proj.title }}</b>
+            <p>
+                {{ proj.desc | markdownify | remove: '<p>' | remove: '</p>'}}
+            </p>
+            {% include extra_links.html proj=proj %}
+
+        </div>
     </div>
-    <p>
-        {{ proj.desc | markdownify | remove: '<p>' | remove: '</p>'}}
-    </p>
-    {% include extra_links.html proj=proj %}
 </div>
+{% endfor %}

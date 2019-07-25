@@ -21,7 +21,7 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
     <script src="https://kit.fontawesome.com/31286db6bd.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jaeyoon Song" /></head><body><header class="site-header">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jaeyoon Song" /></head><body><header class="site-header">
 
     <div class="wrapper"><a class="site-title" rel="author" href="/">
         <img src="/images/logo.png" width="30">
@@ -42,25 +42,88 @@
         </nav></div>
   </header><main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <div class="home">
 
-  <header class="post-header">
-    <h1 class="post-title">Projects</h1>
-  </header>
+  <h2 class="title">Projects</h2>
 
-  <div class="post-content">
-    <section id="projects">
+<section id="projects">
 
-
-    <div class="project">
-    <h3>SoundGlance</h3>
-    <div class="teaser" style="background-image: url(/images/SoundGlance.png)">
-    </div>
-    <p>
-        Briefing the glanceable cues of Web pages for screen reader users
-
-    </p>
+<style>
+    .filtered-list input {
+        display: none;
+    }
+    .filtered-list .filter-item {
+        transition: all .35s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    /* Generate CSS filter rules */
     
+    #category-personal:checked ~ .projects > li:not(.category-personal),
+    
+    #category-competition:checked ~ .projects > li:not(.category-competition),
+    
+    #category-work experience:checked ~ .projects > li:not(.category-work experience),
+    
+    #category-schoolwork:checked ~ .projects > li:not(.category-schoolwork),
+    
+    {
+        max-height: 0px;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .segmented-control {
+        display: flex;
+        max-width: 100vw;
+        overflow: auto;
+    }
+    .segmented-control > * {
+        display: inline-block;
+        border: 1px solid #eee;
+        background-color: #fff;
+        padding: 0 1em;
+        line-height: 2em;
+        font-weight: normal;
+        cursor: pointer;
+        font-size: .95em;
+        margin-left: -1px;
+    }
+    .segmented-control > :first-child {
+        border-radius: 5px 0 0 5px;
+    }
+    .segmented-control > :last-child {
+        border-radius: 0 5px 5px 0;
+    }
+    #category-all:checked ~ .filter-labels #label-category-all,
+    
+    #category-personal:checked ~ .filter-labels #label-category-personal,
+    
+    #category-competition:checked ~ .filter-labels #label-category-competition,
+    
+    #category-work experience:checked ~ .filter-labels #label-category-work experience,
+    
+    #category-schoolwork:checked ~ .filter-labels #label-category-schoolwork,
+    
+    {
+        background-color: #544b61;
+        color: #fff;
+    }
+</style>
+
+
+
+<div class="row">
+    <div class="project col-12 col-sm-6 col-md-4">
+        <span class="box-unvisible top"></span>
+        <span class="box-unvisible right"></span>
+        <span class="box-unvisible bottom"></span>
+        <span class="box-unvisible left"></span>
+        <div class="box-visible" style="background-image: url(/images/SoundGlance.png)">
+            <b>SoundGlance</b>
+            <p>
+                Briefing the glanceable cues of Web pages for screen reader users
+
+            </p>
+            
 <div class="extra-links">
     
     <a href="/assets/SoundGlance.pdf" target="_blank">
@@ -82,17 +145,24 @@
     
 </div>
 
+
+        </div>
+    </div>
 </div>
 
-    <div class="project">
-    <h3>OSS Efficiency</h3>
-    <div class="teaser" style="background-image: url(/images/Atari2600.png)">
-    </div>
-    <p>
-        What Is Needed for the Sustainable Success of Open Source Software Projects? - Efficiency Analysis of Commit Production Process via Git
+<div class="row">
+    <div class="project col-12 col-sm-6 col-md-4">
+        <span class="box-unvisible top"></span>
+        <span class="box-unvisible right"></span>
+        <span class="box-unvisible bottom"></span>
+        <span class="box-unvisible left"></span>
+        <div class="box-visible">
+            <b>OSS Efficiency</b>
+            <p>
+                What Is Needed for the Sustainable Success of Open Source Software Projects? - Efficiency Analysis of Commit Production Process via Git
 
-    </p>
-    
+            </p>
+            
 <div class="extra-links">
     
     
@@ -110,14 +180,17 @@
     
 </div>
 
+
+        </div>
+    </div>
 </div>
+
+
 
 </section>
 
-  </div>
 
-</article>
-
+</div>
       </div>
     </main><footer class="site-footer h-card">
     <data class="u-url" href="/"></data>
