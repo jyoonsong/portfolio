@@ -10,11 +10,11 @@ html {
 }
 
 ::selection {
-  background: $light-brand-color;
+  background: $brand-color-light;
   text-shadow: none;
 }
 ::-moz-selection {
-  background: $light-brand-color;
+  background: $brand-color-light;
   text-shadow: none;
 }
 

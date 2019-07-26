@@ -98,6 +98,7 @@
     float: right;
     border: none;
     background-color: inherit;
+    z-index: 0;
 
     label[for="nav-trigger"] {
       display: none;
@@ -197,6 +198,9 @@
 /**
  * Page content
  */
+.home {
+  width: 100%;
+}
 .page-content {
   padding: $spacing-unit 0;
   flex: 1 0 auto;

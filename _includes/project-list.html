@@ -1,0 +1,106 @@
+<style>
+    /* Generate CSS filter rules */
+    {% for topic in site.data.projects.topics %}
+    #category-{{topic}}:checked ~ #projects > .project:not(.category-{{topic}}),
+    {% endfor %}
+    dummy
+    {
+        display: none;
+    }
+    #category-all:checked ~ .filter-labels #label-category-all,
+    {% for topic in site.data.projects.topics %}
+    #category-{{topic}}:checked ~ .filter-labels #label-category-{{topic}},
+    {% endfor %}
+    dummy
+    {
+        background-color: #544b61;
+        color: #fff;
+    }
+</style>
+
+<div class="filtered-list">
+
+<input type="radio" name="category" id="category-all" checked />
+{% for topic in site.data.projects.topics %}
+<input type="radio" name="category" id="category-{{topic}}" />
+{% endfor %}
+
+<div class="filter-labels">
+    <div class="filter-label-list">
+        <div class="segmented-control">
+            <label for="category-all" id="label-category-all">All</label>
+            {% for topic in site.data.projects.topics %}
+            <label for="category-{{topic}}" id="label-category-{{topic}}">{{ topic | capitalize }}</label>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<section id="projects">
+
+{% assign projects = site.data.projects.projects | sort: "year" | reverse | where_exp: "proj", "proj.hidden == nil" %}
+{% for proj in projects %}
+<div id="{{ proj.id }}" class="project {% for t in proj.topic %} category-{{ t }} {% endfor %}">
+    <span class='box-unvisible top'></span>
+    <span class='box-unvisible right'></span>
+    <span class='box-unvisible bottom'></span>
+    <span class='box-unvisible left'></span>
+    <div class='box-visible {% if proj.featured %} featured {% endif %}'>
+        <h3><b>{{ proj.title }}</b></h3>
+        <p>
+            {{ proj.desc | markdownify | remove: '<p>' | remove: '</p>'}}
+        </p>
+        <p><a>
+            {% for k in proj.keywords %} {{ k }}{% unless forloop.last %}; {% endunless %}  {% endfor %}
+        </a></p>
+        <div>
+            {% for t in proj.topic %}
+            <small class="badge">{{ t }}</small>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+</section>
+</div>
+
+<script>
+MicroModal.init();
+
+{% assign isProject = true %}
+
+{% for proj in projects %}
+document.getElementById("{{ proj.id }}").onclick = function(e) {
+    let img = "";
+    {% if proj.image %} 
+    img += "<div><img src='{{ proj.image }}'></div>";
+    {% endif%}
+    document.getElementById("modal-title").innerHTML = "{{ proj.title }}<br><small>{{ proj.desc }}</small>";
+    document.getElementById("modal-content").innerHTML = img + "{{ proj.paragraph }}"
+    document.getElementById("modal-extra").innerHTML = `{% include extra_links.html proj=proj %}`;
+    MicroModal.show("modal");
+}
+{% endfor %}
+
+</script>
+
+<div id="modal" class="modal micromodal-slide" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+                <h2 id="modal-title" class="modal__title">
+                Title of the project
+                </h2>
+                <button class="modal__close" aria-label="Close" data-micromodal-close>
+                </button>
+            </header>
+            <div id="modal-extra">
+                Buttons
+            </div>
+            <div id="modal-content" class="modal__content">
+                Project description
+            </div>
+        </div>
+    </div>
+</div>

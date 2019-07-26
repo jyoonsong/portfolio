@@ -14,7 +14,7 @@ $spacing-unit:     30px !default;
 $text-color:       #111 !default;
 $background-color: #fff !default;
 $brand-color:      #40b1f0 !default;
-$light-brand-color:#BFE5E5 !default;
+$brand-color-light:#BFE5E5 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -65,5 +65,6 @@ $on-large:         $on-laptop !default;
   "scss/home",
   "scss/publication",
   "scss/projects",
+  "scss/modal",
   "scss/cube"
 ;

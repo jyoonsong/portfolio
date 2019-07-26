@@ -50,7 +50,7 @@
         {{ pub.year | escape }}.
     </div>
     {% endif %}
-
+    
     {% assign proj2 = site.data.projects.projects | where: "id", pub.id %}
     {% assign proj = proj2[0] %}
     {% include extra_links.html proj=proj %}
