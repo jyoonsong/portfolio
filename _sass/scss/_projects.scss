@@ -45,54 +45,59 @@
 
 .project {
     position: relative;
-    perspective: 100vw;
-    transform-style: preserve-3d;
     cursor: pointer;
 
-    .box-unvisible {
-        position: absolute;
+    @media screen and (min-width: $on-medium) {
+        perspective: 100vw;
+        transform-style: preserve-3d;
+    }
 
-        &.top {
-            top: 0;
-            right: 0;
-            bottom: 50%;
-            left: 0;
-            clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
-            &:hover ~ .box-visible {
-                transform: rotateX(10deg);
+    .box-unvisible {
+        @media screen and (min-width: $on-medium) {
+            position: absolute;
+
+            &.top {
+                top: 0;
+                right: 0;
+                bottom: 50%;
+                left: 0;
+                clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+                &:hover ~ .box-visible {
+                    transform: rotateX(10deg);
+                }
             }
-        }
-        
-        &.right{
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 50%;
-            clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
-            &:hover ~ .box-visible {
-                transform: rotateY(10deg);
+            
+            &.right{
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 50%;
+                clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
+                &:hover ~ .box-visible {
+                    transform: rotateY(10deg);
+                }
             }
-        }
-        
-        &.bottom {
-            top: 50%;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
-            &:hover ~ .box-visible {
-                transform: rotateX(-10deg);
+            
+            &.bottom {
+                top: 50%;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
+                &:hover ~ .box-visible {
+                    transform: rotateX(-10deg);
+                }
             }
-        }
-        
-        &.left {
-            top: 0;
-            right: 50%;
-            bottom: 0;
-            left: 0;
-            clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0);
-            &:hover ~ .box-visible {
-                transform: rotateY(-10deg);
+            
+            &.left {
+                top: 0;
+                right: 50%;
+                bottom: 0;
+                left: 0;
+                clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0);
+                &:hover ~ .box-visible {
+                    transform: rotateY(-10deg);
+                }
             }
         }
         
@@ -100,12 +105,14 @@
     }
 
     .box-visible {
-        background-position: left center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        pointer-events: none;
-        will-change: transform;
-        transition: transform 0.5s;
+        @media screen and (min-width: $on-medium) {
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            pointer-events: none;
+            will-change: transform;
+            transition: transform 0.5s;
+        }
 
         padding: 1rem 1.2rem;
         box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);

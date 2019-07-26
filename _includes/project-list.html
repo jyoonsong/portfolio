@@ -66,33 +66,54 @@
 </div>
 
 <script>
-MicroModal.init();
 
-{% assign isProject = true %}
+document.addEventListener("DOMContentLoaded", function(event) {
 
-{% for proj in projects %}
-document.getElementById("{{ proj.id }}").onclick = function(e) {
-    let img = "";
-    {% if proj.image %} 
-    img += "<div><img src='{{ proj.image }}'></div>";
-    {% endif%}
-    document.getElementById("modal-title").innerHTML = "{{ proj.title }}<br><small>{{ proj.desc }}</small>";
-    document.getElementById("modal-content").innerHTML = img + "{{ proj.paragraph }}"
-    document.getElementById("modal-extra").innerHTML = `{% include extra_links.html proj=proj %}`;
-    MicroModal.show("modal");
-}
-{% endfor %}
+    let modal = document.getElementById("modal");
 
+    Array.from(document.querySelectorAll(".closeModal")).forEach(function(ele) {
+        ele.onclick = function() {
+            closeModal();
+        }
+    })
+
+    function openModal() {
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+    }
+    function closeModal() {
+        document.getElementById("modal").classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+    }
+        
+    {% assign isProject = true %}
+
+    {% for proj in projects %}
+    document.getElementById("{{ proj.id }}").onclick = function(e) {
+        let img = "";
+        {% if proj.image %} 
+        img += "<div><img src='{{ proj.image }}' alt='Loading...'></div>";
+        {% endif%}
+        document.getElementById("modal-title").innerHTML = "{{ proj.title }}<br><small>{{ proj.desc }}</small>";
+        document.getElementById("modal-content").innerHTML = img + "{{ proj.paragraph }}"
+        document.getElementById("modal-extra").innerHTML = `{% include extra_links.html proj=proj %}`;
+        
+        openModal();
+    }
+    {% endfor %}
+});
 </script>
 
-<div id="modal" class="modal micromodal-slide" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+<div id="modal" class="modal micromodal-slide" aria-hidden="false">
+    <div class="closeModal modal__overlay" tabindex="-1">
+        <div class="modal__container">
             <header class="modal__header">
                 <h2 id="modal-title" class="modal__title">
                 Title of the project
                 </h2>
-                <button class="modal__close" aria-label="Close" data-micromodal-close>
+                <button class="closeModal modal__close">
                 </button>
             </header>
             <div id="modal-extra">
