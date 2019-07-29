@@ -25,6 +25,8 @@ github_username:  jyoonsong
 markdown: kramdown
 theme: minima
 
+sass:
+  style: compressed
 #plugins:
   # - jekyll-feed
 

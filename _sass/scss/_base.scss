@@ -3,6 +3,10 @@ html {
   -ms-overflow-style: scrollbar;
 }
 
+html, body, .new-body {
+  position: relative;
+}
+
 *,
 *::before,
 *::after {

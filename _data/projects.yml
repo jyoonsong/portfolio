@@ -15,10 +15,12 @@ projects:
   keywords:
     - accessibility
   paper: https://dl.acm.org/citation.cfm?id=3312865/
+  video: https://www.youtube.com/watch?v=_Qml_WqmVFY
   code: https://github.com/SoundGlance/
-  image: /images/SoundGlance.png
+  image: /images/soundglance.png
   desc: Briefing the glanceable cues of Web pages for screen reader users
-  paragraph: <strong>Motivation.</strong> I learned HTML for the first time when I was in high school, and since then I've been participating in a lot of web projects mostly working as a front-end developer. As I got better in web development, <b>web accessibility</b> was one thing I started to care about. Although there was an official accessibility guideline for web developers to comply with, most websites do not follow this guideline in reality. I thought there should be some other way to tackle the problem of web accessibility, which is the initial motivation for SoundGlance project.<br><br> So I and Kiroong started this project with the help of X-corps research institute and Siloam Center for the Blind People. Then, I continued this project while I was working at <a target='_blank' href='https://hcil.snu.ac.kr'>SNU HCI Lab</a>.<br><br> <strong>Abstract.</strong> Screen readers have become a core assistive technology for blind web users to browse web pages. Although screen readers can convey the textual information or structural properties of web pages, they cannot deliver their overall impression. Such a limitation hinders blind web users from obtaining an overview of the website, which non-blind people can do in a short time. As such, we present SoundGlance, a novel application that briefly delivers an auditory summary of web pages. SoundGlance supports the screen reader users by converting the important glanceable cues of the pages into sound. The feasibility of prototype was examined in a pilot study with fourteen blind people. Several practical insights were derived from the experiment.
+  paragraph: <strong>Motivation.</strong> I learned HTML for the first time when I was in high school, and since then I've been participating in a lot of web projects mostly working as a front-end developer. As I got better in web development, <b>web accessibility</b> was one thing I started to care about. Although there was an official accessibility guideline for web developers to comply with, most websites did not follow this guideline in reality. I thought there should be some other way to tackle the problem of web accessibility than just to rely on each developer, which is the initial motivation for SoundGlance project.<br><br> So I and Kiroong started this project with the help of X-corps research institute and Siloam Center for the Blind People. Then, I continued this project while I was working at <a target='_blank' href='https://hcil.snu.ac.kr'>SNU HCI Lab</a>.<br><br> <strong>Abstract.</strong> Screen readers have become a core assistive technology for blind web users to browse web pages. Although screen readers can convey the textual information or structural properties of web pages, they cannot deliver their overall impression. Such a limitation hinders blind web users from obtaining an overview of the website, which non-blind people can do in a short time. As such, we present SoundGlance, a novel application that briefly delivers an auditory summary of web pages. SoundGlance supports the screen reader users by converting the important glanceable cues of the pages into sound. The feasibility of prototype was examined in a pilot study with fourteen blind people. Several practical insights were derived from the experiment.
+
 - id: oss
   title: OSS Efficiency
   year: 201603
@@ -39,7 +41,7 @@ projects:
     date: May 2018
     affiliation: Undergraduate Research Presentation Competition, Korean Production & Operations Management Society
     link: http://www.hangyo.com/news/article.html?no=85459
-  paragraph: I started this project when I was <b>freshman</b> at college. I took a course called 'Operations Management' taught by Professor Changhee Kim, where I did this project as a class assignment. Then, I took another class called 'Management Science' also taught by Prof. Kim. There, I worked more on the project and almost completed it. So this project was in fact already finished when I was a sophomore. <br><br>Next year, when I became a junior, I won first prize at a competition held by Korean Production and Operations Management Society (KOPOMS) by presenting this project. Then, Prof. Kim recommended submitting the completed work to a journal called Sustainability to me. That's how this work got published. However, since I had no time when submitting this article, I just hired a expert to translate my manuscript, but now that I look more into it, translation is kind of bad. Please keep in mind that the I only wrote the Korean version.<br><br>The paper is about 'what is needed for open source software projects to be efficient?'. Linus' Law celebrates the 'many eyeballs' as the key advantage of open source projects, but when it comes to efficiency, <b>'many eyeballs' could be a double-bladed sword.</b> By mining and analyzing the data collected from GitHub open source projects, this paper provides several implications about the efficiency of open source projects.
+  paragraph: I started this project when I was <b>freshman</b> at college. I took a course titled 'Operations Management' taught by Professor Changhee Kim, where I did this project as a class assignment. Then, I took another class called 'Management Science' also taught by Prof. Kim. There, I worked more on the project and almost completed it. So this project was in fact already finished when I was a sophomore. <br><br>Next year, when I became a junior, I won first prize at a competition held by Korean Production and Operations Management Society (KOPOMS) where I gave a talk about this project. Soon Prof. Kim recommended to me submitting the completed work to a journal called Sustainability. That's how this work got published. However, since I had no time at the moment, I just <b>hired an expert to translate my manuscript</b>. Now that I look more into it, translation is kind of bad. Please keep in mind that the I only wrote the Korean version.<br><br>The paper is about 'what is needed for open source software projects to be efficient?'. Existing literature and common wisdom including Linus' Law celebrate the 'many eyeballs' as the key advantage of open source projects. Nevertheless, when it comes to efficiency, <b>'many eyeballs' could be a double-bladed sword.</b> By mining and analyzing the data collected from GitHub open source projects, this paper provides several implications about the efficiency of open source projects.
 
 - id: shashagungun
   title: Shashagungun (샤샤건건)
@@ -57,8 +59,8 @@ projects:
     name: Winner (1st)
     date: Feb 2017
     affiliation: SNULife School Service Development Tournament
-    link: http://www.hangyo.com/news/article.html?no=85459
-  paragraph: In preparation
+    link: https://snulife.com/sandbox/106346747
+  paragraph: <strong>Introduction.</strong> Shashagungun is a platform for Seoul National University (SNU) students to share posters about school events such as market, daily pub, competitions, seminars, exhibitions, and so on. It was implemented by me and other 5 people, who were all members of a web programming club called <a target='_blank' href='https://snu.likelion.net'>Likelion</a>. We won <b>first place at a competition for developing a school-related service</b> held by <a target='_blank' href='https://snulife.com'>SNULife</a>, which is a web-based community for SNU students. Shashagungun is a coined term derived from Korean idiom 'Sasagungun (사사건건)' combined with 'Sha (샤)' that is symbolic of SNU.<br><br><strong>Motivation.</strong> My idea about Shashagungun started a long time ago. I used to design a number of posters, but as time passed, I felt bad about my posters stuck useless in my laptop -- not only mine, but many other high quality posters lasting only for a short period of time and then thrown out to bin. <br><br> Furthermore, this was tragedy for not only the designers, but also students in general. Information on school events, particularly the unofficial ones held by students, was so unorganized that students often were confused or never found out the events. Something had to be done to get the posters organized in a single space. <br><br> So these are why I came up with the idea of bringing the posters online to create an online platform where (1) students can easily search and obtain information on school events, and (2) at the same time designers can preserve their precious efforts on the posters.
 
 - id: music
   title: Music of Bullshit (아무말음악잔치)
@@ -89,7 +91,7 @@ projects:
   desc: Restaurant recommendation service for Samsung AI Hackathon
   award:
     name: Top Ten Finalist
-    date: Sep 2018
+    date: /images/samsung.jpg
     affiliation: Samsung Research
     link: https://research.samsung.com/aichallenge/hackathon
   paragraph: In preparation
@@ -130,7 +132,7 @@ projects:
   link: https://jaeyoon.io/dt4c
   image: /dt4c/img/img-1-small.jpg
   desc: Twelve variations of magic spells that appear in Harry Potter series.
-  paragraph: In preparation
+  paragraph: When I was young, I used to draw up a list of magic spells whenever I was reading Harry Potter. Some of them were so frequently cited that I remember them even now. Among a number of spells, as the title implies, I tried to avoid selecting deadly spells such as the three unforgivable curses—Avada Kedavra, for example, kills the target. Instead, selected spells are the ones that are comparatively peaceful and trivial but useful. This also accords with the theme of this assignment—my favorite things—since deadly curses are definitely not my favorite, though the magic itself and Harry Potter series are.<br><br>For more information, please visit <a href='https://jaeyoon.io/dt4c' target='_blank'>website.</a>
 
 - id: degrees
   title: Six Degrees of Jaeyoon Song
@@ -143,7 +145,7 @@ projects:
   link: https://jaeyoon.io/dt4c
   image: /dt4c/img/img-3-small.jpg
   desc: Checking 'six degrees of Kevin Bacon' for my relationships on Facebook
-  paragraph: In preparation
+  paragraph: <strong>About.</strong> I collected data of my friends at Facebook, friend lists of those friends, friend lists of those friends of friends, and so on—only up to 6 times. With this data, I found the shortest path within six degrees that starts from my direct friends and comes back to me on Facebook. Also, I collected data of recent closeness by combining the number of mentions each friend is mentioned in my recent SNS notifications with my subjective closeness. My intention was to briefly check the following two things - (1) Does the concept of “six degrees of Kevin Bacon” also apply to my relationships on Facebook? (2) Does the shortest path have any relationship with recent closeness? The answer for first question was most of the times, since there were several exceptions. For second question, the answer was definitely yes, since there was high correlation between recent closeness and the degree in the shortest path. Personally, I thought that my relationships are relatively distributed, because with the other person’s data, I believe the results might have been much simpler ending up with only two or three degrees.<br><br><strong>How to Read.</strong> Each line coming straight out from the center of the circle represents my direct friend who is one degree away from me. The innermost part of the circle is recent closeness visualized as a line graph. Then, the innermost node refers to the friend of my friend, not my direct friend. So if the number of degree is 2, the path is ‘my friend - friend’s friend - me’. If the path was found within six degrees, the vertices and edges were colored gray, whereas if not, the vertices and edges were colored blue—the vertices of me myself were colored yellow. The dark blue zone corresponds to an infinite zone implying that the connection didn’t come back to me yet.<br><br><img src='https://66.media.tumblr.com/7c68dfaf932ee05a0e085541a602eec4/tumblr_inline_pjzlchpmns1w8f964_540.gif' width='400'><br><br><strong>Implementation.</strong> For implementation, I used d3.js, which was also introduced in class by Professor Hong. Since d3.js is easily used together with web standards, I made an interactive version—nothing special except for tooltips, export function, and the buttons to check the small multiples—on web as the photo above.
 
 - id: bigpearl
   title: Founding member of Bigpearl
@@ -167,8 +169,9 @@ projects:
   keywords:
     - web development
   link: https://jaeyoon.io/cube
+  image: /images/cube.gif
   desc: My previous portfolio website
-  paragraph: In preparation
+  paragraph: I love cubes (i.e., regular hexahedrons). Why? There is not really special reason. You know, they're just interesting, stable, and beautiful.<br><br> I do know that placing navigation links on a cube that is incessantly rotating does not really provide an omptimal user experience, which is why I created this new ''ordinary'' version of portfolio website. The cube version was more targeted for <i>expressing</i> myself as an enthusiast in web development and design. I wanted to place something non-typical and cool in the middle of my website.<br><br>I started this project as an assignment at 'Interactive Web Development' class taught by <a href='https://viterbi.usc.edu/directory/faculty/Kim/Nayeon' target='_blank'>Prof. Nayeon Kim</a> at University of Southern California. I was an exchange student there, and I got the top score for the final project (300/300) with this website. I also got A as my final grade, the highest grade in grading system at USC.
 
 - id: history
   title: Visualizing Korean Independence Movement
@@ -190,6 +193,5 @@ projects:
   keywords:
     - web development
     - sensemaking
-  link: https://jaeyoon.io/infovis
   desc: How to support writing a meeting log while doing a video chat?
   paragraph: In preparation

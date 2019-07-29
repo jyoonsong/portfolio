@@ -1,8 +1,12 @@
 /**************************\
   Basic Modal Styles
 \**************************/
-body.modal-open {
-  overflow: hidden;
+.modal-open {
+  overflow: hidden !important;
+  margin: 0px !important
+}
+.new-body {
+  min-height: 100vh;
 }
 
 .modal {
@@ -12,6 +16,11 @@ body.modal-open {
   
 .modal.is-open {
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
     
   
@@ -28,7 +37,7 @@ body.modal-open {
   }
   
   .modal__container {
-    padding: 3rem 1.2rem;
+    padding: 3.5rem 1.2rem;
     background-color: #fff;
     max-width: 100vw;
     max-height: 100vh;
@@ -44,19 +53,19 @@ body.modal-open {
         border-radius: 4px;
     }
     @media (max-width: $on-large) {
-      height: 100vh;
+        height: 100vh;
     }
   }
   
   .modal__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .modal__title {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: .45rem;
     line-height: 1.25;
     color: #00449e;
     box-sizing: border-box;
@@ -81,11 +90,6 @@ body.modal-open {
     margin: 1rem 0 0;
     line-height: 1.5;
     color: rgba(0,0,0,.8);
-    img {
-        max-width: 100%;
-        width: 350px;
-        margin-bottom: 1rem;
-    }
   }
   
   .modal__btn {

@@ -72,7 +72,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let modal = document.getElementById("modal");
 
     Array.from(document.querySelectorAll(".closeModal")).forEach(function(ele) {
-        ele.onclick = function() {
+        ele.onclick = function(e) {
+            if (e.target != ele) return;
             closeModal();
         }
     })
@@ -80,24 +81,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function openModal() {
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden", "false");
+
         document.body.classList.add("modal-open");
+        document.querySelector("html").classList.add("modal-open");
+        document.querySelector(".new-body").classList.add("modal-open");
     }
     function closeModal() {
         document.getElementById("modal").classList.remove("is-open");
         modal.setAttribute("aria-hidden", "true");
+
         document.body.classList.remove("modal-open");
+        document.querySelector("html").classList.remove("modal-open");
+        document.querySelector(".new-body").classList.remove("modal-open");
+
+        let showed = document.querySelector(".project-images img.show");
+        if (showed)
+            showed.classList.remove("show");
     }
         
     {% assign isProject = true %}
 
     {% for proj in projects %}
     document.getElementById("{{ proj.id }}").onclick = function(e) {
-        let img = "";
         {% if proj.image %} 
-        img += "<div><img src='{{ proj.image }}' alt='Loading...'></div>";
+            document.getElementById("img-{{ proj.id }}").classList.add("show");
         {% endif%}
+        document.getElementById("modal-content").innerHTML = "{{ proj.paragraph }}"
         document.getElementById("modal-title").innerHTML = "{{ proj.title }}<br><small>{{ proj.desc }}</small>";
-        document.getElementById("modal-content").innerHTML = img + "{{ proj.paragraph }}"
         document.getElementById("modal-extra").innerHTML = `{% include extra_links.html proj=proj %}`;
         
         openModal();
@@ -105,23 +115,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
     {% endfor %}
 });
 </script>
-
-<div id="modal" class="modal micromodal-slide" aria-hidden="false">
-    <div class="closeModal modal__overlay" tabindex="-1">
-        <div class="modal__container">
-            <header class="modal__header">
-                <h2 id="modal-title" class="modal__title">
-                Title of the project
-                </h2>
-                <button class="closeModal modal__close">
-                </button>
-            </header>
-            <div id="modal-extra">
-                Buttons
-            </div>
-            <div id="modal-content" class="modal__content">
-                Project description
-            </div>
-        </div>
-    </div>
-</div>
