@@ -52,7 +52,7 @@ projects:
     - competition
   keywords:
     - web development
-  image: http://miniddong.me/resource/2016-11-13-web-portfolio/shashagungun_landing.png
+  image: /images/shashagungun.png
   link: http://shashagungun.com
   desc: Web Platform to gather posters of various events in Seoul National University
   award:
@@ -71,7 +71,7 @@ projects:
   keywords:
     - idea
   image: /images/music.png
-  slides: https://blog.naver.com/jaeyo_on/221046496405
+  slides: https://www.slideshare.net/JyoonSong/music-of-bullshit-likelion-ideathon-2017-184059240
   desc: Any sound can become a music! A platform where users can collaboratively composing with any kind of nonsense sound
   award:
     name: Top Ten Winner ($1,000 AWS Credits)
