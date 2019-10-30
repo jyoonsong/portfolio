@@ -34,7 +34,7 @@ projects:
   paper: https://www.mdpi.com/2071-1050/10/9/3001
   code: https://github.com/jyoonsong/oss-efficiency
   image: https://www.mdpi.com/sustainability/sustainability-10-03001/article_deploy/html/images/sustainability-10-03001-g003-550.jpg
-  slides: https://jaeyoon.io
+  slides: https://www.slideshare.net/JyoonSong/what-is-needed-for-the-sustainable-success-of-open-source-software-projects-efficiency-analysis-of-commit-production-process-via-git-171519211
   desc: What Is Needed for the Sustainable Success of Open Source Software Projects?
   award:
     name: Grand Prize (1st)
@@ -87,7 +87,7 @@ projects:
     - competition
   keywords:
     - web development
-  slides: https://blog.naver.com/jaeyo_on/221046496405
+  slides: https://www.slideshare.net/JyoonSong/music-of-bullshit-likelion-ideathon-2017-184059240
   desc: Restaurant recommendation service for Samsung AI Hackathon
   award:
     name: Top Ten Finalist
