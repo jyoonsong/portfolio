@@ -36,16 +36,23 @@
   type: Paper
 
 - id: solutionChat
-  title: "SolutionChat: Supporting Ill-structured Chat Discussion"
+  title: "SolutionChat: Real-time Moderator Support for Chat-based Structured Discussion"
   authors:
-    - Project at Kixlab (Dec 2018 - Present)
-  year: 2018
+    - Sungchul Lee
+    - Jaeyoon Song
+    - Eunyoung Ko
+    - Jihee Kim
+    - Juho Kim
+  conference:
+    title: CHI 2020
+  year: 2020
   wip:
     - des: Scaffolding ill-structured problem solving process in online chat
   attrs:
     - international
-    - wip
-  type: Work in Progress
+    - conference
+    - paper
+  type: Paper
 
 - id: gaemi
   title: "Credibility Assessment and Critical Thinking through Microtasks while Reading"
