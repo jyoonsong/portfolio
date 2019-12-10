@@ -6,6 +6,38 @@ topics:
 - schoolwork
 
 projects:
+# - id: solutionChat
+#   title: SolutionChat
+#   year: 201812
+#   featured: true
+#   topic: 
+#     - research
+#   keywords:
+#     - online discussion
+#   paper: https://dl.acm.org/citation.cfm?id=3312865/
+#   video: https://www.youtube.com/watch?v=_Qml_WqmVFY
+#   code: https://github.com/SoundGlance/
+#   image: /images/soundglance.png
+#   desc: Real-time Moderator Support for Chat-based Structured Discussion
+#   paragraph: In preparation
+
+# - id: talkingBoogie
+#   title: TalkingBoogie
+#   year: 201901
+#   featured: false
+#   topic: 
+#     - research
+#   keywords:
+#     - collaboration
+#     - accessibility
+#   paper: https://dl.acm.org/citation.cfm?id=3312865/
+#   video: https://www.youtube.com/watch?v=_Qml_WqmVFY
+#   code: https://github.com/SoundGlance/
+#   image: /images/soundglance.png
+#   desc: Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers
+#   paragraph: In preparation
+
+
 - id: soundglance
   title: SoundGlance
   year: 201902

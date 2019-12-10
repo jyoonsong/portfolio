@@ -4,8 +4,8 @@ title: Publications
 order: 1
 ---
 
+{% assign publications = site.data.publications | sort: "year" | reverse %}
 {% assign papers = publications | where_exp: "item", "item.attrs contains 'paper'" %}
-{% assign conferences = publications | where_exp: "item", "item.attrs contains 'conference'" %}
 {% assign posters = publications | where_exp: "item", "item.attrs contains 'poster'" %}
 {% assign wips = publications | where_exp: "item", "item.attrs contains 'wip'" %}
 

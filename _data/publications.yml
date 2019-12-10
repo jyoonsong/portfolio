@@ -33,10 +33,11 @@
     - international
     - journal
     - paper
-  type: Paper
+  type: Journal
 
 - id: solutionChat
   title: "SolutionChat: Real-time Moderator Support for Chat-based Structured Discussion"
+  year: 2020
   authors:
     - Sungchul Lee
     - Jaeyoon Song
@@ -44,15 +45,32 @@
     - Jihee Kim
     - Juho Kim
   conference:
-    title: CHI 2020
-  year: 2020
-  wip:
-    - des: Scaffolding ill-structured problem solving process in online chat
+    title: CHI
+    year: 2020
   attrs:
     - international
     - conference
     - paper
-  type: Paper
+  type: Conference
+
+- id: talkingBoogie
+  title: "TalkingBoogie: Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers"
+  year: 2020
+  authors:
+    - Donghoon Shin
+    - Jaeyoon Song
+    - Seokwoo Song
+    - Jisoo Park
+    - Joonhwan Lee
+    - Soojin Jeon
+  conference:
+    title: CHI
+    year: 2020
+  attrs:
+    - international
+    - conference
+    - paper
+  type: Conference
 
 - id: gaemi
   title: "Credibility Assessment and Critical Thinking through Microtasks while Reading"
