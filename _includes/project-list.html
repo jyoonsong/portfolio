@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         {% if proj.image %} 
             document.getElementById("img-{{ proj.id }}").classList.add("show");
         {% endif%}
-        document.getElementById("modal-content").innerHTML = "{{ proj.paragraph }}"
-        document.getElementById("modal-title").innerHTML = "{{ proj.title }}<br><small>{{ proj.desc }}</small>";
+        document.getElementById("modal-content").innerHTML = `{{ proj.paragraph }}`;
+        document.getElementById("modal-title").innerHTML = `{{ proj.title }}<br><small>{{ proj.desc }}</small>`;
         document.getElementById("modal-extra").innerHTML = `{% include extra_links.html proj=proj %}`;
         
         openModal();
